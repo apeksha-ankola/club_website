@@ -1,0 +1,90 @@
+.card {
+  width: 80%;
+  max-width: 350px;
+  height: auto;
+  background-color: #fff;
+  border-radius: 15px;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
+  padding: 15px;
+  margin: 20px auto;
+
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.card-image {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.main-text {
+  line-height: 1.5;
+  padding: 10px;
+  font-size: 28px;
+  font-weight: 600;
+  text-align: center;
+}
+
+.card__image img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.card__image {
+  padding: 8px;
+  margin-bottom: 0.5em;
+}
+
+.card__content {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.card__title {
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin-bottom: 0.3em;
+}
+
+.card__text {
+  font-size: 1.3rem;
+  margin: 0.8em 0;
+  text-align: center;
+}
+
+.card__btn {
+  background-color: hsl(230, 62%, 56%);
+  color: #fff;
+  font-size: 1rem;
+  text-transform: uppercase;
+  font-weight: 600;
+  border: none;
+  padding: 0.5em 1em;
+  border-radius: 0.5em;
+  margin-top: 0.5em;
+  cursor: pointer;
+}
+
+.swiper {
+  width: 100%;
+  background-color: hsl(230, 100%, 97%);
+}
+
+.swiper-wrapper {
+  width: 100%;
+  height: auto;
+  display: flex;
+  align-items: center;
+}
+
+@media screen and (max-width: 768px) {
+  .card {
+    width: 90%;
+    margin: 20px auto; /* Center the cards */
+  }
+}

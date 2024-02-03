@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { Button } from "../styles/Button";
+import { Button } from "../Button/Button";
 import { NavLink } from "react-router-dom";
 import { FaLinkedin, FaInstagram } from "react-icons/fa";
 
@@ -25,17 +25,22 @@ const Footer = () => {
       {/* footer section  */}
 
       <footer>
-        <div className="container grid grid-four-column">
-
+        <div className="container grid grid-three-column">
+          {/* 4 cols to 3 cols */}
           <div className="footer-about">
             <h3>InnovAIt-ON</h3>
-            <p>Dive into collaborative projects spanning diverse fields, from cutting-edge technology to sustainable design.</p>
+            <p>
+              Dive into collaborative projects spanning diverse fields, from
+              cutting-edge technology to sustainable design.
+            </p>
 
-            <p>Join us in transforming inspiration into tangible results and embark on a journey of innovation, learning, and shared success!!</p>
+            <p>
+              Join us in transforming inspiration into tangible results and
+              embark on a journey of innovation, learning, and shared success!!
+            </p>
           </div>
 
-          {/* 2nd column */}
-          <div className="footer-subscribe">
+          {/* <div className="footer-subscribe">
             <h3>Subscribe to our newsletter get latest updates</h3>
             <form action="#">
               <input
@@ -46,35 +51,35 @@ const Footer = () => {
               />
               <input type="submit" value="Subscribe" />
             </form>
-          </div>
+          </div> */}
 
-          {/* 3rs column  */}
+          {/* 2nd column  */}
           <div className="footer-social">
             <h3>Follows Us</h3>
             <div className="footer-social--icons">
-
               <div>
                 <a
                   href="https://www.linkedin.com/company/innovaiton-rnsit/"
-                  target="_blank">
+                  target="_blank"
+                  rel="noreferrer"
+                >
                   <FaLinkedin className="icons" />
                 </a>
-              
               </div>
 
               <div>
                 <a
                   href="https://www.instagram.com/innovaiton_rnsit/?igsh=MTNsb3M2dmo4YTBxcQ%3D%3D"
-                  target="_blank">
+                  target="_blank"
+                  rel="noreferrer"
+                >
                   <FaInstagram className="icons" />
                 </a>
-                
               </div>
-
             </div>
           </div>
 
-          {/* 4th column  */}
+          {/* 3rd column  */}
           <div className="footer-contact">
             <h3>Call Us</h3>
             <h3>+91 12345678978</h3>
@@ -85,9 +90,7 @@ const Footer = () => {
         <div className="footer-bottom--section">
           <hr />
           <div className="container grid grid-two-column">
-            <p>
-              @{new Date().getFullYear()} InnovAIt-ON. Technical Team
-            </p>
+            <p>@{new Date().getFullYear()} InnovAIt-ON. Technical Team</p>
             <div>
               <p>PRIVACY POLICY</p>
               <p>TERMS & CONDITIONS</p>
@@ -112,6 +115,8 @@ const Wrapper = styled.section`
   .contact-short-btn {
     justify-self: end;
     align-self: center;
+    border-radius: 2em;
+    box-shadow: 0 0 2em rgba(0, 0, 0, 0.2);
   }
 
   footer {
@@ -126,7 +131,6 @@ const Wrapper = styled.section`
       color: ${({ theme }) => theme.colors.white};
     }
 
-
     .footer-social--icons {
       display: flex;
       gap: 2rem;
@@ -134,8 +138,8 @@ const Wrapper = styled.section`
       div {
         padding: 1rem;
         border-radius: 50%;
-        border: 2px solid ${({ theme }) => theme.colors.white};   
-      // circle around
+        border: 2px solid ${({ theme }) => theme.colors.white};
+        // circle around
 
         .icons {
           color: ${({ theme }) => theme.colors.white};

@@ -1,21 +1,18 @@
 import React from "react";
-import { Routes,Route } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 import { ThemeProvider } from "styled-components";
-import { GlobalStyle } from "./GlobalStyle";
+import { GlobalStyle } from "./Components/GlobalStyle/GlobalStyle.jsx";
 
-import Header from "./Components/Header";
-import Homepage from "./Homepage";
-import Newsletter from "./Newsletter";
-// import Events from "./Events";
-import Members from "./Members";
-import Footer from "./Components/Footer";
-import Error from "./Error.jsx";
-import GoToTop from "./Components/GoToTop.jsx";
+import Header from "./Components/Header/Header.jsx";
+import Homepage from "./Components/Homepage/Homepage.jsx";
+import Newsletter from "./Components/Newsletter/Newsletter.jsx";
+import Events from "./Components/Eventss/Events.jsx";
+import Members from "./Components/Members/Members.jsx";
+import Footer from "./Components/Footer/Footer.jsx";
+import Error from "./Components/Error/Error.jsx";
+import GoToTop from "./Components/GoToTop/GoToTop.jsx";
 
-
-
-const App = () =>{
-
+const App = () => {
   const theme = {
     colors: {
       heading: "hsl(230, 70%, 16%);",
@@ -38,29 +35,21 @@ const App = () =>{
   };
 
   return (
-
     <ThemeProvider theme={theme}>
       <GlobalStyle />
       <GoToTop />
       {/* <BrowserRouter> */}
-      <Header/>
+      <Header />
       <Routes>
-        <Route path="/" element={<Homepage/>} />
-        <Route path="/newsletter" element={<Newsletter/>} />
-        <Route path="/members" element={<Members/>} />
-        {/* <Route path="/events" element={<Events/>} /> */}
-        {/* <Route path="/contact" element={<Contact/>} /> */}
-      <Route path="*" element={<Error/>} />
+        <Route path="/" element={<Homepage />} />
+        <Route path="/newsletter" element={<Newsletter />} />
+        <Route path="/members" element={<Members />} />
+        <Route path="/events" element={<Events />} />
+        <Route path="*" element={<Error />} />
       </Routes>
-      <Footer/>
+      <Footer />
       {/* </BrowserRouter> */}
     </ThemeProvider>
-
-  
-    
-
-    
-  )
-}
+  );
+};
 export default App;
-

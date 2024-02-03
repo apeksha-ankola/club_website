@@ -1,8 +1,8 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 import styled from "styled-components";
-import { Button } from "../styles/Button";
-import { useGlobalContext } from "../context";
+import { Button } from "../Button/Button";
+import { useGlobalContext } from "../Context/context";
 
 const MainSection = () => {
   const { name, image } = useGlobalContext();

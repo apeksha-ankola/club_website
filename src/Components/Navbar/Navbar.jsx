@@ -94,8 +94,7 @@ const Navbar = () => {
           }
         }
       }
-       
-      
+
       .active .mobile-nav-icon {
         display: none;
         font-size: 4.2rem;
@@ -127,7 +126,8 @@ const Navbar = () => {
             <NavLink
               className="navbar-link"
               onClick={() => setOpenMenu(false)}
-              to="/">
+              to="/"
+            >
               Home
             </NavLink>
           </li>
@@ -136,16 +136,18 @@ const Navbar = () => {
             <NavLink
               className="navbar-link"
               onClick={() => setOpenMenu(false)}
-              to="/events">
+              to="/events"
+            >
               Events
             </NavLink>
           </li>
-          
+
           <li>
             <NavLink
               className="navbar-link"
               onClick={() => setOpenMenu(false)}
-              to="/newsletter">
+              to="/newsletter"
+            >
               Newsletter
             </NavLink>
           </li>
@@ -154,18 +156,11 @@ const Navbar = () => {
             <NavLink
               className="navbar-link"
               onClick={() => setOpenMenu(false)}
-              to="/members">
+              to="/members"
+            >
               Members
             </NavLink>
           </li>
-          {/* <li>
-            <NavLink
-              className="navbar-link"
-              onClick={() => setOpenMenu(false)}
-              to="/contact">
-              Contact
-            </NavLink>
-          </li> */}
         </ul>
         {/* //nav icon */}
         <div className="mobile-navbar-btn">

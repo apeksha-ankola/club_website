@@ -2,25 +2,15 @@ import React from "react";
 import { NavLink } from "react-router-dom";
 // import { motion } from "framer-motion";
 
-import Navbar from "./Navbar";
+import Navbar from "../Navbar/Navbar";
 import styled from "styled-components";
-
 
 const Header = () => {
   return (
     <MainHeader>
-       <NavLink to="/">
-        <h2 className="logo-text">INNOVAIT-ON</h2>
+      <NavLink to="/">
+        <h3 className="logo-text">INNOVAIT-ON</h3>
       </NavLink>
-      {/* <motion.div
-      initial={{ opacity: 0, y: -180 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{
-        ease: "easeInOut",
-        duration: 1,
-        delay: 0.6,
-      }}>
-    </motion.div> */}
       <Navbar />
     </MainHeader>
   );
