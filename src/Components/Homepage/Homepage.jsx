@@ -12,7 +12,7 @@ const Homepage = () => {
 
   useEffect(() => {
     updateHomePage();
-  }, [updateHomePage]);
+  }, []);
   return (
     <>
       <MainSection />
