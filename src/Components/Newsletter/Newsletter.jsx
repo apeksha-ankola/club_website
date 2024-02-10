@@ -1,7 +1,38 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
+import axios from 'axios';
 
 const Newsletter = () => {
+
+  const[newsData, setNewsData] = useState({
+    name: '',
+    email: '',
+  })
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setNewsData((prevData) => ({
+      ...prevData,
+      [name]: value,
+    }));
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    // Creating an object with user data
+    const userData = { ...newsData };
+    const response = await axios.post("http://localhost:9450/storeEmail", userData);
+    alert(response.data.message);
+    setNewsData({
+      name: '',
+      email: '',
+  });
+
+   
+
+  }
+
   return (
     <Wrapper>
       <h2 className="main-text">INNOVAIT-ON Newsletter</h2>
@@ -11,9 +42,15 @@ const Newsletter = () => {
             <div className="left"></div>
             <div className="right">
               <h2>Subscribe to Newsletter</h2>
-              <input type="text" className="field" placeholder="Your Name" />
-              <input type="email" className="field" placeholder="Your Email" />
+              <form onSubmit={handleSubmit}>
+              
+              <input type="text" className="field" name="name" value={newsData.name}
+                onChange={handleChange} placeholder="Enter Your Name" />
+
+              <input type="email" className="field" name="email" value={newsData.email}
+                onChange={handleChange} placeholder="Enter Your Email" />
               <button className="btn">SUBSCRIBE</button>
+              </form>
             </div>
           </div>
         </div>
