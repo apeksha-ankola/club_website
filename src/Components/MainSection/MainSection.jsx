@@ -4,6 +4,8 @@ import styled from "styled-components";
 import { Button } from "../Button/Button";
 import { useGlobalContext } from "../Context/context";
 
+import "./Background.css"
+
 const MainSection = () => {
   const { name, image } = useGlobalContext();
 
@@ -11,11 +13,27 @@ const MainSection = () => {
     <Wrapper>
       <div className="container grid grid-two-column">
         <div className="section-main-data">
-          
+          <div className="box">
+            <div> </div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+          </div>
           <h1 className="main-heading">{name}</h1>
           <h1 className="tagline">Ideate-Innovate-Ignite</h1>
           <p className="para-text">
-          Our project-based club is a dynamic community of passionate individuals dedicated to bringing ideas to life. Dive into collaborative projects spanning diverse fields, from cutting-edge technology to sustainable design. Join us in transforming inspiration into tangible results and embark on a journey of innovation, learning, and shared success!!
+            Our project-based club is a dynamic community of passionate
+            individuals dedicated to bringing ideas to life. Dive into
+            collaborative projects spanning diverse fields, from cutting-edge
+            technology to sustainable design. Join us in transforming
+            inspiration into tangible results and embark on a journey of
+            innovation, learning, and shared success!!
           </p>
           <Button className="btn explore-btn">
             <NavLink to="/events"> Explore </NavLink>
@@ -28,7 +46,6 @@ const MainSection = () => {
             <img src= {image} alt="logoimage" className="logo-img " />
           </picture>
         </div> */}
-        
       </div>
     </Wrapper>
   );
@@ -59,26 +76,25 @@ const Wrapper = styled.section`
     color: ${({ theme }) => theme.colors.black};
   }
 
-
   .para-text {
     margin-top: 1.5rem;
     margin-bottom: 3.4rem;
     max-width: 60rem;
   }
 
-  .section-logo-image {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
+  // .section-logo-image {
+  //   display: flex;
+  //   justify-content: center;
+  //   align-items: center;
+  // }
 
-  picture {
-    text-align: center;
-  }
+  // picture {
+  //   text-align: center;
+  // }
 
-  .logo-img {
-    max-width: 80%;
-  }
+  // .logo-img {
+  //   max-width: 80%;
+  // }
 
   @media (max-width: ${({ theme }) => theme.media.mobile}) {
     .grid {
