@@ -9,7 +9,7 @@ const Members = () => {
   return (
     <>
       <Wrapper>
-        <h2 className="main-text">INNOVAIT-ON Members</h2>
+        <h2 className="main-text">InnvoAIt-on Members</h2>
         <Swiper
           effect={"coverflow"}
           grabCursor={true}
@@ -38,7 +38,7 @@ const Members = () => {
                 <div className="card__content">
                   <span className="card__title">{member.name}</span>
                   <span className="card__name">{member.role}</span>
-                  <p className="card__text">{member.description}</p>
+                  <br></br>
                   <a
                     href={member.linkedinUrl}
                     target="_blank"
@@ -59,16 +59,15 @@ const Wrapper = styled.section`
   * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
   }
 
   body {
-    display: flex;
+    display: inline-flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
-
-    background-color: #f4f4f4;
+    background-color: hsl(230, 50%, 90%);
+    
   }
 
   .swiper {
@@ -84,18 +83,16 @@ const Wrapper = styled.section`
   }
 
   .main-text {
-    line-height: 40px;
-    margin-bottom: 5px;
-    font-size: 30px;
-    font-weight: 500;
+    line-height: 1.5;
+    padding: 10px;
+    font-size: 28px;
+    font-weight: 600;
     text-align: center;
-    background-color: hsl(230, 100%, 97%);
   }
 
   .card {
     width: 20em;
     height: 90%;
-    background-color: #fff;
     border-radius: 2em;
     box-shadow: 0 0 2em rgba(0, 0, 0, 0.2);
     padding: 2em 1em;
@@ -103,8 +100,11 @@ const Wrapper = styled.section`
     display: flex;
     align-items: center;
     flex-direction: column;
+    cursor: grabbing;
 
     margin: 0 2em;
+    background-color: hsl(0, 0%, 100%);
+
   }
 
   .card__image {
@@ -130,7 +130,7 @@ const Wrapper = styled.section`
   }
 
   .card__title {
-    font-size: 1.5rem;
+    font-size: 1.6rem;
     font-weight: 500;
     position: relative;
     top: 0.2em;
@@ -138,6 +138,7 @@ const Wrapper = styled.section`
 
   .card__name {
     color: hsl(230, 62%, 56%);
+    font-size: 1.1rem;
   }
 
   .card__text {
