@@ -23,7 +23,7 @@ const Newsletter = () => {
     // Creating an object with user data
     const userData = { ...newsData };
     const response = await axios.post(
-      "http://localhost:9450/storeEmail",
+      "https://be-innovait-on.onrender.com/storeEmail",
       userData
     );
     alert(response.data.message);
