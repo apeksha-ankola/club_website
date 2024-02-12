@@ -36,7 +36,7 @@ const MainSection = () => {
             innovation, learning, and shared success!!
           </p>
           <Button className="btn explore-btn">
-            <NavLink to="/events"> Explore </NavLink>
+            <NavLink to="/events"> Exploree </NavLink>
           </Button>
         </div>
 
