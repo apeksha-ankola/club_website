@@ -83,11 +83,12 @@ const Wrapper = styled.section`
   }
 
   .main-text {
-    line-height: 1.5;
-    padding: 10px;
-    font-size: 28px;
-    font-weight: 600;
+    line-height: 40px;
+    margin-bottom: 5px;
+    font-size: 30px;
+    font-weight: 500;
     text-align: center;
+    background-color: hsl(230, 100%, 97%);
   }
 
   .card {

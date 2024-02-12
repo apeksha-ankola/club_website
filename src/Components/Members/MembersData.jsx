@@ -26,6 +26,13 @@ const membersData = [
     imageUrl: "./images/members/amogh-athreya.jpg",
     linkedinUrl: "https://www.linkedin.com/in/amogh-athreya-454515254",
   },
+  
+  {
+    name: "Nishitha R Lokhande",
+    role: "Core member-Technical team",
+    imageUrl: "./images/members/nishitha-L.jpg",
+    linkedinUrl: "https://www.linkedin.com/in/nishitha-r-lokande-094509254",
+  },
 
   {
     name: "Ranjitha V",
@@ -35,16 +42,9 @@ const membersData = [
   },
 
   {
-    name: "Nishitha R Lokhande",
-    role: "Core member-Technical team",
-    imageUrl: "./images/members/nishitha-L.jpg",
-    linkedinUrl: "https://www.linkedin.com/in/nishitha-r-lokande-094509254",
-  },
-
-  {
     name: "Sujal S",
     role: "Core member-Organising team",
-    imageUrl: "./images/members/sujal-jn.jpg",
+    imageUrl: "./images/members/sujal.jpg",
     linkedinUrl: "https://www.linkedin.com/in/sujal-sarode-3a5b3a25b",
   },
 
@@ -54,12 +54,14 @@ const membersData = [
     imageUrl: "./images/members/dhruva-nu.jpg",
     linkedinUrl: "https://www.linkedin.com/in/dhruva-n-u-b6788a249/",
   },
+  
   {
     name: "Apeksha D Ankola",
     role: "Core member-Technical team",
     imageUrl: "./images/members/apeksha-d.jpg",
     linkedinUrl: "https://www.linkedin.com/in/apeksha-d-ankola-aa4512254/",
   },
+  
 
   {
     name: "Aadi B Kumar",
@@ -74,6 +76,7 @@ const membersData = [
     imageUrl: "./images/members/amogh-kotha.jpg",
     linkedinUrl: "https://www.linkedin.com/in/amogh-kotha-a5617823b",
   },
+  
 ];
 
 export default membersData;

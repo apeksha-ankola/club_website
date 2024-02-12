@@ -29,6 +29,8 @@
   background-color: hsl(230, 100%, 97%);
 }
 
+
+
 .card__image img {
   width: 100%;
   height: auto;
@@ -81,6 +83,25 @@
   height: auto;
   display: flex;
   align-items: center;
+}
+
+h2 {
+  position: relative;
+  padding: 0 0 10px;
+  margin-bottom: 10px;
+  font-size: 2rem;
+}
+
+h2:after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%);
+  height: 4px;
+  width: 50px;
+  border-radius: 2px;
+  background-color: hsl(230, 62%, 56%);
 }
 
 @media screen and (max-width: 768px) {
