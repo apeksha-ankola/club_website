@@ -7,7 +7,7 @@ import { useGlobalContext } from "../Context/context";
 import "./Background.css"
 
 const MainSection = () => {
-  const { name, image } = useGlobalContext();
+  const { name } = useGlobalContext();
 
   return (
     <Wrapper>
@@ -41,11 +41,11 @@ const MainSection = () => {
         </div>
 
         {/* for image  */}
-        {/* <div className="section-logo-image">
+        {<div className="section-logo-image">
           <picture>
-            <img src= {image} alt="logoimage" className="logo-img " />
+            <img src= "./images/logo.png" alt="logoimage" className="logo-img " />
           </picture>
-        </div> */}
+        </div> }
       </div>
     </Wrapper>
   );

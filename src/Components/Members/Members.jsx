@@ -67,7 +67,6 @@ const Wrapper = styled.section`
     align-items: center;
     height: 100vh;
     background-color: hsl(230, 50%, 90%);
-    
   }
 
   .swiper {
@@ -105,7 +104,6 @@ const Wrapper = styled.section`
 
     margin: 0 2em;
     background-color: hsl(0, 0%, 100%);
-
   }
 
   .card__image {
