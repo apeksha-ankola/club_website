@@ -29,8 +29,8 @@ const EventsData = [
   {
     name: "WINNERS OF S-1, EP-1",
     description:
-      "Congratulations to all !!! Here is the list of winners of BLITZ-PY-2.First place- YASH VYAS, Second place- ___, Third place- SAHITI REDDY",
-    imageUrl: "./images/winnersposter.png"
+      "Congratulations to all !!! Here is the list of winners of BLITZ-PY-2.First place- YASH VYAS, Second place- SIDDHARTH H, Third place- SAHITI REDDY",
+    imageUrl: "./images/winnersposter1.png"
   },
 
   
