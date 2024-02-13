@@ -41,6 +41,17 @@ const Newsletter = () => {
     }
 
     setLoading(false);
+    // Creating an object with user data
+    const userData = { ...newsData };
+    const response = await axios.post(
+      "https://be-innovait-on.onrender.com/storeEmail",
+      userData
+    );
+    alert(response.data.message);
+    setNewsData({
+      name: "",
+      email: "",
+    });
   };
 
   return (
