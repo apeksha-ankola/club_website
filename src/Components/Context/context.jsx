@@ -16,7 +16,7 @@ const AppProvider = ({ children }) => {
       type: "HOME_UPDATE",
       payload: {
         name: "InnovAIt-ON",
-        image: "./images/logo-pink.gif",
+        image: "./images/logo.png",
       },
     });
   };

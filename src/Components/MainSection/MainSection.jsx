@@ -7,7 +7,7 @@ import { useGlobalContext } from "../Context/context";
 import "./Background.css"
 
 const MainSection = () => {
-  const { name } = useGlobalContext();
+  const { name, image } = useGlobalContext();
 
   return (
     <Wrapper>
@@ -36,14 +36,14 @@ const MainSection = () => {
             innovation, learning, and shared success!!
           </p>
           <Button className="btn explore-btn">
-            <NavLink to="/events"> Explore </NavLink>
+            <NavLink to="/"> Explore </NavLink>
           </Button>
-        </div>
+        </div> 
 
         {/* for image  */}
         {<div className="section-logo-image">
           <picture>
-            <img src= "./images/logo.png" alt="logoimage" className="logo-img " />
+            <img src= {image} alt="logoimage" className="logo-img " />
           </picture>
         </div> }
       </div>
@@ -82,19 +82,19 @@ const Wrapper = styled.section`
     max-width: 60rem;
   }
 
-  // .section-logo-image {
-  //   display: flex;
-  //   justify-content: center;
-  //   align-items: center;
-  // }
+  .section-logo-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 
-  // picture {
-  //   text-align: center;
-  // }
+  picture {
+    text-align: center;
+  }
 
-  // .logo-img {
-  //   max-width: 80%;
-  // }
+  .logo-img {
+    max-width: 80%;
+  }
 
   @media (max-width: ${({ theme }) => theme.media.mobile}) {
     .grid {

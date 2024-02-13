@@ -178,3 +178,19 @@ h2:after {
     border-top-right-radius: 8px;
   }
 } 
+
+@media screen and (max-width: 768px) {
+  .containerr {
+    padding: 10px;
+  }
+
+  .contact-form {
+    padding: 20px;
+  }
+
+  .content {
+    flex-basis: 100%;
+    border-radius: 0;
+  }
+}
+
