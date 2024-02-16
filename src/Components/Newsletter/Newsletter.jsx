@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import axios from "axios";
 
 import "./Newsletter.css";
-import "./Background.css";
 
 const Newsletter = () => {
   const [loading, setLoading] = useState(false);

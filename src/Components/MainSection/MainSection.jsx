@@ -1,13 +1,19 @@
-import React from "react";
-import { NavLink } from "react-router-dom";
+import React, { useRef } from "react";
 import styled from "styled-components";
 import { Button } from "../Button/Button";
 import { useGlobalContext } from "../Context/context";
 
-import "./Background.css"
+import "./Background.css";
 
 const MainSection = () => {
   const { name, image } = useGlobalContext();
+  const newsletterRef = useRef(null);
+
+  const scrollToNewsletter = () => {
+    if (newsletterRef.current) {
+      newsletterRef.current.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
+  };
 
   return (
     <Wrapper>
@@ -35,18 +41,22 @@ const MainSection = () => {
             inspiration into tangible results and embark on a journey of
             innovation, learning, and shared success!!
           </p>
-          <Button className="btn explore-btn">
-            <NavLink to="/"> Explore </NavLink>
+          <Button className="btn explore-btn" onClick={scrollToNewsletter}>
+            Explore
           </Button>
-        </div> 
+        </div>
 
         {/* for image  */}
-        {<div className="section-logo-image">
-          <picture>
-            <img src= {image} alt="logoimage" className="logo-img " />
-          </picture>
-        </div> }
+        {
+          <div className="section-logo-image">
+            <picture>
+              <img src={image} alt="logoimage" className="logo-img " />
+            </picture>
+          </div>
+        }
       </div>
+      {/* Newsletter Section */}
+      <div ref={newsletterRef}></div>
     </Wrapper>
   );
 };

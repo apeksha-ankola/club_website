@@ -17,7 +17,9 @@ const Homepage = () => {
     <>
       <MainSection />
       <Events />
-      <Newsletter />
+      <div id="newsletter-section">
+        <Newsletter />
+      </div>
       <Members />
     </>
   );

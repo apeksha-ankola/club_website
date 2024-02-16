@@ -18,7 +18,7 @@
   animation: animate 7s linear infinite;
 }
 
-.box div:nth-child(3) {
+ .box div:nth-child(3) {
   top: 17%;
   left: 6%;
   animation: animate 9s linear infinite;
