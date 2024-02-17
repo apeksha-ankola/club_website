@@ -5,6 +5,7 @@ import { EffectCoverflow, Pagination } from "swiper/modules";
 
 import membersData from "./MembersData";
 
+
 const Members = () => {
   return (
     <>
@@ -37,7 +38,7 @@ const Members = () => {
                 </div>
                 <div className="card__content">
                   <span className="card__title">{member.name}</span>
-                  <span className="card__name">{member.role}</span>
+                  <span className="card__role">{member.role}</span>
                   <br></br>
                   <a
                     href={member.linkedinUrl}
@@ -91,7 +92,7 @@ const Wrapper = styled.section`
   }
 
   .card {
-    width: 20em;
+    width: 25em;
     height: 90%;
     border-radius: 2em;
     box-shadow: 0 0 2em rgba(0, 0, 0, 0.2);
@@ -129,15 +130,17 @@ const Wrapper = styled.section`
   }
 
   .card__title {
-    font-size: 1.6rem;
+    font-size: 1.5rem;
     font-weight: 500;
     position: relative;
     top: 0.2em;
+    bottom: 0.2em;
   }
 
-  .card__name {
+  .card__role {
     color: hsl(230, 62%, 56%);
-    font-size: 1.1rem;
+    font-size: 1.2rem;
+    white-space: nowrap;
   }
 
   .card__text {
