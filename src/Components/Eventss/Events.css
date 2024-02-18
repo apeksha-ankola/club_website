@@ -1,4 +1,4 @@
-* {
+/* * {
   margin: 0;
   padding: 0;
 }
@@ -8,7 +8,7 @@ body {
   align-items: center;
   height: 100vh;
   background-color: hsl(230, 50%, 90%);
-}
+} */
 
 .swiper {
   width: 100%;
