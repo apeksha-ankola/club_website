@@ -17,7 +17,7 @@ const Events = () => {
 
   return (
     <>
-      <h2 className="main-text">InnovAIt- Events</h2>
+      <h2 className="main-text">InnovAIt-on Events</h2>
       <div className="gen-ai">
         <img
           src="./images/GenAI.png"
