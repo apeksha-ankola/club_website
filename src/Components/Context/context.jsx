@@ -28,7 +28,7 @@ const AppProvider = ({ children }) => {
   );
 };
 
-// global custom hook
+// global custom hook-   
 const useGlobalContext = () => {
   return useContext(AppContext);
 };
