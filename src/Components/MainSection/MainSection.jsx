@@ -35,7 +35,7 @@ const MainSection = () => {
           <h1 className="tagline">Ideate-Innovate-Ignite</h1>
           <p className="para-text">
             Our project-based club is a dynamic community of passionate
-            individuals dedicated to bringing ideas to life. Dive into
+            individuals dedicated to bring ideas to life. Dive into
             collaborative projects spanning diverse fields, from cutting-edge
             technology to sustainable design. Join us in transforming
             inspiration into tangible results and embark on a journey of

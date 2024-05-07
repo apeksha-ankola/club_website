@@ -5,11 +5,14 @@ import "./Newsletter.css";
 
 const Newsletter = () => {
   const [loading, setLoading] = useState(false);
+
+  const [showDownload, setShowDownload] = useState(false);
   const [newsData, setNewsData] = useState({
     name: "",
     email: "",
   });
 
+  // Function to handle input changes in the form fields
   const handleChange = (e) => {
     const { name, value } = e.target;
     setNewsData((prevData) => ({
@@ -18,6 +21,7 @@ const Newsletter = () => {
     }));
   };
 
+  // Function to handle form submission
   const handleSubmit = async (e) => {
     e.preventDefault();
     if (!newsData.name || !newsData.email) {
@@ -33,6 +37,9 @@ const Newsletter = () => {
         userData
       );
       alert(response.data.message);
+      setShowDownload(true);
+
+      // Clear the form data after successful submission
       setNewsData({ name: "", email: "" });
     } catch (error) {
       console.error("Error:", error);
@@ -40,18 +47,29 @@ const Newsletter = () => {
     }
 
     setLoading(false);
-  
-    setNewsData({
-      name: "",
-      email: "",
-    });
+  };
+
+  // Function to handle the download of the newsletter
+  const handleDownload = () => {
+    const pdfPath = "/images/newsletter-1.pdf";
+    const link = document.createElement("a");
+    link.href = pdfPath;
+    link.setAttribute("download", "newsletter.pdf");
+
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+
+    // Hide the "Download Newsletter" button after download
+    setShowDownload(false)
   };
 
   return (
     <div className="contact-form">
       <div className="containerr">
-        <div className="box">
-          <div> </div>
+        {/* Box with expanded class when showDownload is true */}
+        <div className={`box ${showDownload ? "expanded" : ""}`}>
+          <div></div>
           <div></div>
           <div></div>
           <div></div>
@@ -87,9 +105,17 @@ const Newsletter = () => {
               {loading ? (
                 <p>Loading...</p>
               ) : (
-                <button className="btn" type="submit">
-                  SUBSCRIBE
-                </button>
+                <div className="button-container">
+                  <button className="btn" type="submit">
+                    SUBSCRIBE
+                  </button>
+                  {/* Download Newsletter */}
+                  {showDownload && (
+                    <button className="download-btn" onClick={handleDownload}>
+                      Download Newsletter
+                    </button>
+                  )}
+                </div>
               )}
             </form>
           </div>
@@ -101,4 +127,5 @@ const Newsletter = () => {
     </div>
   );
 };
+
 export default Newsletter;

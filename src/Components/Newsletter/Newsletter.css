@@ -66,6 +66,13 @@ button:hover {
   transition: 0.5s ease;
 }
 
+.button-container {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px; /* Adjust as needed */
+}
+
+
 .contact-form input {
   outline: none;
   margin-bottom: 15px;
